@@ -1,6 +1,4 @@
-# The socket way
 import socket
-import urllib.request, urllib.parse, urllib.error
 
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysock.connect(('www.pythonlearn.com', 80))
@@ -14,11 +12,3 @@ while True:
     print(data.decode());
 
 mysock.close()
-
-
-# The urllib way
-
-
-fhand = urllib.request.urlopen('http://www.pythonlearn.com/code3/romeo.txt')
-for line in fhand:
-    print(line.decode().strip())
